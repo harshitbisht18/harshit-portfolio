@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harshit Bisht — Portfolio</title>
+  <meta name="description" content="Portfolio of Harshit Bisht — B.Tech CSE student. Projects: Real-Time Location Tracking App, Virtual Mouse, AI Text-to-Speech Converter." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#98a0b3; --accent:#60a5fa; --glass: rgba(255,255,255,0.04);
+      --max-w:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#e6eef8;background:linear-gradient(180deg,#071026 0%, #07152a 100%);}
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:var(--max-w);margin:28px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;overflow:hidden;border:2px solid var(--accent);}
+    .avatar img{width:100%;height:100%;object-fit:cover;}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:4px 0 0;color:var(--muted)}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{padding:8px 12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);cursor:pointer}
+
+    main{display:grid;grid-template-columns:1fr 380px;gap:18px;margin-top:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);}
+
+    .about h2{margin-top:0}
+    .section{margin-bottom:14px}
+    .projects .project{padding:12px;border-radius:10px;margin-bottom:12px;background:transparent;border:1px dashed rgba(255,255,255,0.02)}
+    .project h3{margin:0 0 6px}
+    .badges{display:flex;flex-wrap:wrap;gap:8px}
+    .badge{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
+
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
+
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:980px){main{grid-template-columns:1fr;}.avatar{width:72px;height:72px}.wrap{padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">
+          <img src="Harshit Bisht.png" alt="Harshit Bisht">
+        </div>
+        <div>
+          <h1>Harshit Bisht</h1>
+          <p class="lead">B.Tech — Computer Science • Graphic Era Hill University • 8.19 CGPA</p>
+        </div>
+      </div>
+      <nav>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#experience">Experience</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <article class="card about section">
+          <h2>About</h2>
+          <p>Computer Science undergraduate at Graphic Era Hill University. Interested in full‑stack development, computer vision, and building accessible AI tools. Currently mentoring juniors at WeCode Coding Club and preparing for industry roles.</p>
+
+          <div class="section">
+            <h3>Education</h3>
+            <p><strong>Graphic Era Hill University</strong> — B.Tech, Computer Science (July 2022 — Present)<br/>CGPA: 8.19</p>
+            <p><strong>Kendriya Vidyalaya Ranikhet</strong> — Intermediate (77.4%)</p>
+          </div>
+
+          <div id="projects" class="section projects">
+            <h3>Selected Projects</h3>
+
+            <div class="project">
+              <h3>Real-Time Location Tracking App</h3>
+              <p><em>Node.js, Express, Socket.IO, Leaflet.js — Aug 2025</em></p>
+              <ul>
+                <li>Live location sharing using Socket.IO with position updates every 5s.</li>
+                <li>Integrated HTML5 Geolocation API with high-accuracy settings; improved precision on GPS devices.</li>
+                <li>Server optimizations led to up to 30% faster response handling under test loads.</li>
+              </ul>
+              <div class="badges"><span class="badge">Node.js</span><span class="badge">Socket.IO</span><span class="badge">Leaflet</span></div>
+            </div>
+
+            <div class="project">
+              <h3>Virtual Mouse</h3>
+              <p><em>Python, OpenCV, MediaPipe — Oct 2024</em></p>
+              <ul>
+                <li>Gesture recognition for mouse control (move, click, scroll) with ~95% tracking accuracy.</li>
+                <li>Volume control using thumb/pinky gestures via pycaw; improved accessibility.</li>
+              </ul>
+              <div class="badges"><span class="badge">Python</span><span class="badge">OpenCV</span><span class="badge">MediaPipe</span></div>
+            </div>
+
+            <div class="project">
+              <h3>AI Text-to-Speech Converter</h3>
+              <p><em>Python, HTML5, CSS3 — Apr 2024</em></p>
+              <ul>
+                <li>Integrated TTS and STT with ~90% intelligible audio output; handles 10k+ interactions monthly.</li>
+                <li>Text summarization feature reducing content length by ~50%.</li>
+              </ul>
+              <div class="badges"><span class="badge">TTS</span><span class="badge">NLP</span></div>
+            </div>
+
+          </div>
+
+          <div class="section">
+            <h3>Skills</h3>
+            <div class="skill-list">
+              <span class="badge">C</span><span class="badge">C++</span><span class="badge">Python</span><span class="badge">Java</span><span class="badge">JavaScript</span>
+              <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">Tailwind</span><span class="badge">React</span><span class="badge">MySQL</span>
+            </div>
+          </div>
+
+        </article>
+
+        <article id="experience" class="card section">
+          <h3>Experience</h3>
+          <p><strong>WeCode Coding Club — Mentor</strong> (Jul 2024 — Present)</p>
+          <ul>
+            <li>Led coding sessions for 100+ students; improved assessment scores with tailored strategies.</li>
+            <li>Conducted hands-on workshops for 50+ students, increasing confidence and performance.</li>
+          </ul>
+
+          <div class="section">
+            <h3>Relevant Coursework</h3>
+            <div class="badges">
+              <span class="badge">Data Structures</span><span class="badge">DBMS</span><span class="badge">OS</span><span class="badge">NLP</span><span class="badge">Networking</span><span class="badge">OOP</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Achievements</h3>
+            <ul>
+              <li>Secured SDE Internship offer at Amazon for Summer 2026.</li>
+              <li>Reached interview round for Microsoft SWE Internship.</li>
+              <li>Solved 700+ coding problems; Knight rating 1950+ on LeetCode; top 205 on GfG.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <aside>
+        <div class="card section">
+          <h3>Contact</h3>
+          <div id="contact" class="contact-list">
+            <a href="tel:+919193525036">📞 +91 9193525036</a>
+            <a href="mailto:bishth535@gmail.com">✉️ bishth535@gmail.com</a>
+            <a href="https://www.linkedin.com/in/harshit-bisht-033503273/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/harshitbisht18" target="_blank">GitHub</a>
+            <a href="https://leetcode.com/u/harshitbisht_18/" target="_blank">LeetCode</a>
+          </div>
+
+          <div class="section">
+            <h4>Quick Facts</h4>
+            <p class="muted">Location: Ranikhet, Uttarakhand</p>
+            <p class="muted">Open to internships & full-time opportunities</p>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h4>Resume</h4>
+          <p>Download: <a href="https://drive.google.com/file/d/1fHg2MYjSHeOoOrozTuwy4Ze7xI1kNw59/view?usp=sharing" id="downloadResume" target="_blank">Open PDF</a></p>
+          <p style="font-size:13px;color:var(--muted)">Last updated: Oct 2025</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>Built from resume — <strong>Harshit Bisht</strong>. • View source or customize as needed.</small>
+    </footer>
+  </div>
+
+  <script>
+    // smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (ev)=>{
+        const t = document.querySelector(a.getAttribute('href'));
+        if(t){ ev.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
